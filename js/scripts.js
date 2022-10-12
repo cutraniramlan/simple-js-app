@@ -3,20 +3,20 @@ var pokemonList = [
 {
 name: "Bulbasaur",
 height: 7,
-type : ['grass', 'poison']
+types : ['grass', 'poison']
 },
 
 
 {
 name: "Charmander",
 height: 2,
-type: 'fire'
+types: 'fire'
 },
 
 {
 name: "Pikachu",
 height: 1,
-type: 'electric'
+types: 'electric'
 }
 
 ];
