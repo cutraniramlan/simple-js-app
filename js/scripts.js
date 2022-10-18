@@ -4,12 +4,7 @@ var pokemonList = [
     {name: "Pikachu", height: 1, types: 'electric'}
 ];
 
+  pokemonList.forEach(function(pokemon){
+    document.write('Pokemon Name: ' + pokemon.name + ',' + ' height: ' + pokemon.height + ',' + ' types: ' + pokemon.types + '<br>' )
+    });
 
-for (let i=0; i < pokemonList.length; i++){
-    if (pokemonList[i].height >=2){
-        document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") -  Waw, that's big! " + "<br>")
-    }
-    else {
-    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") " + "<br>")
-}
-}
