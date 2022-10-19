@@ -21,10 +21,18 @@ var pokemonList = [
         };
       })();
 
-      console.log(pokemonRepository.getAll()); [pokemonList]
-      pokemonList [pokemonRepository.add({ name: 'Bulbasaur' })];
-      console.log(pokemonRepository.getAll()); [ { name: 'Bulbasaur' } ]
+    //   console.log("test 1");
+    //   console.log(pokemonRepository.getAll());
+    //   pokemonRepository.add({ name: 'Bulbasaur' });
+    //   console.log("test 2");
+    //   console.log(pokemonRepository.getAll());
 
-pokemonList.forEach(function(pokemon){
+    pokemonList.forEach(function (pokemon) {
+        pokemonRepository.add(pokemon)
+      });
+       
+      console.log(pokemonRepository.getAll());
+
+    pokemonList.forEach(function(pokemon){
      document.write('Pokemon Name: ' + pokemon.name + ',' + ' height: ' + pokemon.height + ',' + ' types: ' + pokemon.types + '<br>' )
         });
