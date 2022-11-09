@@ -27,40 +27,15 @@ body{
 }
 
 .col-lg-2{
-  position: relative;
-  width:200%;
-  display:-ms-flexbox;
-  display:inline-flex;
-  -ms-flex-direction:column;
-  flex-direction:column;
-  min-width:0;
-  word-wrap:break-word;
-  background-clip: border-box;
   border:1px solid rgba(85, 50, 2, 0.125);
-  border-radius: 40px;
+  border-radius: 10px;
   align-items:center;
   align-content:center;
   padding:15px;
-  margin:45px ;
+  margin:15px ; 
   background: rgb(138, 97, 23);
-  transform-style:calc(50);
-  transform: perspective(1000px);
   box-shadow: 10px 20px 40px rgba(249, 25, 25, 0.25);
 
-}
-
-.navbar-img{
-  height: 90px;
-  width: 30px;
-  margin: 0 auto;
-  display: block;
-  position:relative;
-  position: relative;
-  width: 30%;
-  padding-right: 50px;
-  padding-left: 50px;
-  align-items:center;
-  
 }
 
 .btn{

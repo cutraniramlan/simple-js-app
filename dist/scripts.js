@@ -1,6 +1,6 @@
 var pokemonRepository = (function () {
   var pokemonList = [];
-  var apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=100";
+  var apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
   function add(pokemon) {
     if (
       typeof pokemon === "object" &&
@@ -18,22 +18,21 @@ var pokemonRepository = (function () {
   function addListItem(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
       var $container = $(".container");
-      var $row = $('<div class="col-lg-2"></div>');
-
-      // var $card = $('<div class="col-lg-2"></div>');
+      var $row = $(".row");
+      var $col = $('<div class="col-lg-2"></div>');
       var $image = $('<img class="row-img-top" style="width:80%" />');
       $image.attr("src", pokemon.imageUrlFront);
-      var $rowBody = $('<div class="row-body"></div>');
-      var $rowTitle = $("<h4 class='row-title' >" + pokemon.name + "</h4>");
+      var $colBody = $('<div class="col-body"></div>');
+      var $colTitle = $("<h4 class='col-title' >" + pokemon.name + "</h4>");
       var $seeProfile = $(
         '<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal">See Profile</button>'
       );
 
       $container.append($row);
-      $row.append($image);
-      $row.append($rowBody);
-      $rowBody.append($rowTitle);
-      $rowBody.append($seeProfile);
+      $row.append($col);
+      $col.append($image);
+      $col.append($colTitle);
+      $col.append($seeProfile);
 
       $seeProfile.on("click", function (event) {
         showDetails(pokemon);
